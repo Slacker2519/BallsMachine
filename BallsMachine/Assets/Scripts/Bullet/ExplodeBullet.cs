@@ -1,11 +1,10 @@
 using DG.Tweening;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 
 public class ExplodeBullet : BaseBullet
 {
     [SerializeField] private LayerMask _bulletLayer;
+    [SerializeField] private ParticleSystem _explodeEffect;
     private float _currentLifeSpan = 0f;
     private bool _isHittingWall = false;
 
@@ -38,7 +37,7 @@ public class ExplodeBullet : BaseBullet
             ResetBulletVelocity();
             Explode();
 
-            DOVirtual.DelayedCall(0.15f, () =>
+            DOVirtual.DelayedCall(0.2f, () =>
             {
                 PoolManager.Instance.ReturnObject(gameObject);
             });
@@ -56,6 +55,7 @@ public class ExplodeBullet : BaseBullet
             {
                 if (hit.TryGetComponent<BaseBullet>(out BaseBullet bullet))
                 {
+                    _explodeEffect.Play();
                     bullet.ResetBulletVelocity();
                     Vector2 direction = (Vector2)bullet.transform.localPosition - (Vector2)transform.localPosition;
                     bullet.Shoot(direction.normalized);

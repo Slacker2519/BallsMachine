@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3440e041133142e429f44defb39b0c3e, type: 3}
   m_Name: GunSO
   m_EditorClassIdentifier: 
-  _fireRate: 2
+  gunDatas:
+  - _type: 0
+    _fireRate: 2
+    _prefab: {fileID: 488310041641196952, guid: a38a3303b04e1264faeea55aca7b64a4, type: 3}

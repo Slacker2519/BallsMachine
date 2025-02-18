@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd570d971c97e7542b05c600eb8e9aa7, type: 3}
   m_Name: BulletSO
   m_EditorClassIdentifier: 
+  bulletDatas:
+  - _type: 0
+    _lifeSpan: 3
+    _speed: 20
+    _explodeRadius: 2
+    _prefab: {fileID: 8085898156291729027, guid: eb31b0f17549e2443b80cdb0db185290, type: 3}

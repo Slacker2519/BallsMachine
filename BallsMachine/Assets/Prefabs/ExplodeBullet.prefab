@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 325805512698305130}
   - component: {fileID: 3399493561717744101}
   - component: {fileID: 4445320758710649403}
-  m_Layer: 5
-  m_Name: Bullet
+  - component: {fileID: -7231828823135928749}
+  m_Layer: 6
+  m_Name: ExplodeBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +130,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 83151d1e96cebe44489ec69482189ea9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -140,3 +141,21 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &-7231828823135928749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8085898156291729027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8334a21ffff514741b60e55dc4961c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 4445320758710649403}
+  _bulletSO: {fileID: 11400000, guid: 49294b0a476f0f6469ba366a915c88bd, type: 2}
+  _type: 0
+  _bulletLayer:
+    serializedVersion: 2
+    m_Bits: 64
